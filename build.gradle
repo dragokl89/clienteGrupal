@@ -1,0 +1,33 @@
+plugins {
+    id 'war'
+    id 'java'
+    id "io.freefair.lombok" version "6.3.0"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenCentral()
+}
+
+dependencies {
+
+    //CDI
+    implementation group: 'org.jboss.weld.servlet', name: 'weld-servlet-core', version: '3.1.8.Final'
+
+    //Cliente JAX-RS
+    implementation 'org.jboss.resteasy:resteasy-client:4.7.4.Final'
+    implementation 'org.jboss.resteasy:resteasy-jackson2-provider:4.7.4.Final'
+
+    //JSF
+    implementation 'org.glassfish:jakarta.faces:2.3.17'
+
+
+    //Bootstrap
+    implementation 'net.bootsfaces:bootsfaces:1.5.0'
+    implementation 'org.projectlombok:lombok:1.18.22'
+
+
+}

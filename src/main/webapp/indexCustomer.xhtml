@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+
+</h:head>
+
+<h:body>
+    <h1>CRUD DISTRIBUIDA</h1>
+
+    <h:form>
+        <b:dataTable value="#{indexBeanCustomer.customers}"
+                     var="customer1" class="customersdt">
+            <b:dataTableColumn value="#{customer1.id}" />
+            <b:dataTableColumn value="#{customer1.name}" />
+            <b:dataTableColumn value="#{customer1.surname}" />
+            <b:dataTableColumn>
+            <b:commandButton value="Eliminar" icon="delete" update="@(.customersdt)"
+                             actionListener="#{indexBeanCustomer.eliminar(customer1.id)}" >
+            </b:commandButton>
+            </b:dataTableColumn>
+            <b:dataTableColumn>
+                <b:commandButton value="Editar" icon="edit"
+                                 action="modificarCustomer.xhtml" >
+                    <f:setPropertyActionListener value="#{customer1.id}" target="#{indexBeanCustomer.customer.id}"/>
+                </b:commandButton>
+            </b:dataTableColumn>
+        </b:dataTable>
+
+    <b:commandButton value="insert" action="insertarCustomer.xhtml"/>
+    </h:form>
+</h:body>
+
+</html>

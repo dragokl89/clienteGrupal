@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+
+</h:head>
+<h:body>
+    <h:form id="modificar">
+        <h:outputText value="Nombre"/>
+        <h:inputText label="Nombre" id="Nombre" required="true" value="#{indexBeanOrder.order.item}">
+        </h:inputText>
+        <h:outputText value="Precio"/>
+        <h:inputText label="Precio" id="Precio" required="true" value="#{indexBeanOrder.order.price}">
+        </h:inputText>
+        <h:outputText value="Cliente"/>
+        <h:inputText label="Cliente" id="Cliente" required="true" value="#{indexBeanOrder.order.customer_id}">
+        </h:inputText>
+
+        <h:commandButton action="#{indexBeanOrder.editar()}" value="Modificar">
+        </h:commandButton>
+    </h:form>
+    <h:outputLink value="indexOrder.xhtml">Regresar</h:outputLink>
+
+
+</h:body>
+
+</html>

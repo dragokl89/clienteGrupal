@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+
+</h:head>
+<h:body>
+    <h:form id="insertar">
+        <h:outputText value="ID"/>
+        <h:inputText id="Id" required="true" value="#{indexBeanCustomer.customer.id}">
+        </h:inputText>
+        <h:outputText value="Nombre"/>
+        <h:inputText label="Nombre" id="Nombre" required="true" value="#{indexBeanCustomer.customer.name}">
+        </h:inputText>
+        <h:outputText value="Apellido"/>
+        <h:inputText label="Apellido" id="Apellido" required="true" value="#{indexBeanCustomer.customer.surname}">
+        </h:inputText>
+        <h:commandButton action="#{indexBeanCustomer.insertar}" value="insert">
+        </h:commandButton>
+    </h:form>
+    <h:outputLink value="indexCustomer.xhtml">Regresar</h:outputLink>
+
+
+</h:body>
+
+</html>
